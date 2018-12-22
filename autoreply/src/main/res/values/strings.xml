@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">autoreply</string>
+    <string name="tools_autoreply_input">输入消息</string>
+    <string name="tools_autoreply_send">发送</string>
+</resources>

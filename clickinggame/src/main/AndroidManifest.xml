@@ -1,0 +1,14 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="ywxt.tools.clickinggame">
+    <application>
+        <activity 
+                android:name=".ClickingGameActivity"
+                android:theme="@style/AppTheme.NoActionBar"
+        >
+            <intent-filter>
+                <action android:name="ywxt.tools.action.activity.CLICKING_GAME"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+    </application>
+</manifest>

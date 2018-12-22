@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="ywxt.tools.ipaddress">
+
+    <application>
+        <activity 
+                android:name=".IPAddressActivity"
+                android:label="@string/tools_common_activity_ipaddress">
+            <intent-filter>
+                <action android:name="ywxt.tools.action.activity.IP_ADDRESS"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

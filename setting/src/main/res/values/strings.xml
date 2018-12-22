@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">setting</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="tools_setting_preference_author">作者</string>
+    <string name="tools_setting_preference_cw">云水</string>
+    <string name="tools_setting_preference_about">关于</string>
+    <string name="tools_setting_preference_help">帮助</string>
+    <string name="tools_setting_preference_contact">联系</string>
+    <string name="tools_setting_preference_mail">577348032@qq.com</string>
+    <string name="tools_setting_preference_version">版本号</string>
+    <string name="tools_setting_preference_ver">1.0</string>
+</resources>

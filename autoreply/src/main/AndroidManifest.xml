@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:tools="http://schemas.android.com/tools" package="ywxt.tools.autoreply">
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <application
+            android:usesCleartextTraffic="true" tools:targetApi="m">
+        <activity android:name=".AutoReplyActivity"
+            android:label="@string/tools_common_activity_autoreply">
+            <intent-filter>
+                <action android:name="ywxt.tools.action.activity.AUTO_REPLY"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

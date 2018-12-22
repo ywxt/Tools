@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="NumberBar">
+        <attr name="value" format="integer"/>
+        <attr name="maxValue" format="integer"/>
+        <attr name="minValue" format="integer"/>
+    </declare-styleable>
+    <declare-styleable name="CircleImage">
+        <attr name="imageSrc" format="reference"/>
+    </declare-styleable>
+</resources>
