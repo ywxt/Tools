@@ -1,5 +1,6 @@
 package ywxt.tools.home.adapters
 
+import android.os.Parcelable
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -10,7 +11,7 @@ import ywxt.tools.home.R
 import ywxt.tools.home.models.ToolModel
 
 class ToolViewAdapter(
-    val click:(view:View, action:String)->Unit,
+    val click:(view:View, action:String,data:Parcelable?)->Unit,
     private val dataList: ArrayList<ToolModel>
 ) : RecyclerView.Adapter<ToolViewAdapter.ViewHolder>() {
     
@@ -20,7 +21,8 @@ class ToolViewAdapter(
             parent,false
         )
         view.setOnClickListener { 
-            click(it,it.tag as String)
+            val tool=it.tag as ToolModel
+            click(it,tool.action,tool.data)
         }
         return ViewHolder(view)
     }
@@ -30,7 +32,7 @@ class ToolViewAdapter(
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.textView.text= dataList[position].text
         holder.image.setImageDrawable(dataList[position].image)
-        holder.itemView.tag=dataList[position].action
+        holder.itemView.tag=dataList[position]
     }
 
     

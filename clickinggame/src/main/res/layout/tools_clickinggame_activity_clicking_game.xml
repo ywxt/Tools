@@ -17,7 +17,6 @@
                 android:background="?attr/colorPrimary"
                 app:popupTheme="@style/AppTheme.PopupOverlay"
                 app:title="点击"
-                app:subtitle="123456"
         />
 
     </com.google.android.material.appbar.AppBarLayout>

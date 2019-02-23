@@ -7,39 +7,39 @@ import android.view.MotionEvent
 import android.widget.FrameLayout
 import androidx.appcompat.widget.Toolbar
 import ywxt.tools.common.activities.BaseActivity
+import ywxt.tools.common.models.ClickingGameData
 import ywxt.tools.common.views.DynamicImage
 import kotlin.random.Random
 
-class ClickingGameActivity:BaseActivity() {
-    
+class ClickingGameActivity : BaseActivity() {
+
     private val toolbar by lazy { findViewById<Toolbar>(R.id.toolbar) }
     @SuppressLint("ClickableViewAccessibility")
-    override fun onCreate(savedInstanceState: Bundle?)  {
+    override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.tools_clickinggame_activity_clicking_game)
         setSupportActionBar(toolbar)
-        val view =findViewById<FrameLayout>(R.id.tools_clickinggame_layout_frame)
-       
+        val view = findViewById<FrameLayout>(R.id.tools_clickinggame_layout_frame)
+        toolbar.subtitle = this.intent.getParcelableExtra<ClickingGameData>("data").subTitle
         view.setOnTouchListener { _, event ->
-            if (event.action!= MotionEvent.ACTION_DOWN)
+            if (event.action != MotionEvent.ACTION_DOWN)
                 return@setOnTouchListener false
             val image = DynamicImage(this)
             image.circleImage = BitmapFactory.decodeResource(this.resources, getImg(Random.nextInt(4)))
             val param = FrameLayout.LayoutParams(200, 200)
-            param.topMargin = (event.y-image.height/2).toInt()
-            param.leftMargin = (event.x-image.width/2).toInt()
+            param.topMargin = (event.y - image.height / 2).toInt()
+            param.leftMargin = (event.x - image.width / 2).toInt()
             view.addView(image, param)
             true
         }
-        enableBack=true
+        enableBack = true
     }
 
-   
 
-    private fun getImg(i:Int):Int{
-        return when(i){
-            1->R.drawable.img_1
-            2->R.drawable.img_2
+    private fun getImg(i: Int): Int {
+        return when (i) {
+            1 -> R.drawable.img_1
+            2 -> R.drawable.img_2
             else -> R.drawable.img_3
         }
     }

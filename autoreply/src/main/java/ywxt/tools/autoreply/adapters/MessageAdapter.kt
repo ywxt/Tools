@@ -25,7 +25,7 @@ class MessageAdapter(
      *
      * The new ViewHolder will be used to display items of the adapter using
      * [.onBindViewHolder]. Since it will be re-used to display
-     * different items in the data set, it is a good idea to cache references to sub views of
+     * different items in the data set, it is a good idea to cache references to middleIn views of
      * the View to avoid unnecessary [View.findViewById] calls.
      *
      * @param parent The ViewGroup into which the new View will be added after it is bound to
